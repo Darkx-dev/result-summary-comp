@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Hanken Grotesk;
+    user-select: none;
+}
+
+body {
+    background-color: #3F3D56;
+    animation: color-change 10s ease-in-out infinite alternate;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #3F3D56;
+    }
+
+    50% {
+        background-color: #B5EAEA;
+    }
+
+    100% {
+        background-color: #3F3D56;
+    }
+}
+
+.container {
+    display: flex;
+    height: 400px;
+    width: 600px;
+    box-shadow: 0 5px 10px hsla(0, 0%, 1%, 0.2);
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.leftComp {
+    height: 400px;
+    width: 300px;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 30px;
+    padding: 25px 30px 20px 30px;
+    color: hsl(241, 100%, 89%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.rightComp {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    height: 12%;
+    border-radius: 4px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.compIcon {
+    margin-right: 5%;
+}
+
+.summary {
+    font-size: 135%;
+    font-weight: 700;
+    color: hsl(224, 28%, 19%);
+    letter-spacing: 2px;
+}
+
+.reaction {
+    color: hsl(0, 100%, 67%);
+    background: hsla(0, 100%, 67%, 7%);
+}
+
+.memory {
+    color: hsl(39, 100%, 56%);
+    background: hsla(39, 100%, 56%, 7%);
+}
+
+.verbal {
+    color: hsl(166, 100%, 37%);
+    background: hsla(166, 100%, 37%, 7%);
+}
+
+.visual {
+    color: hsl(234, 85%, 45%);
+    background: hsla(234, 85%, 45%, 7%);
+}
+
+.continue {
+    margin-bottom: 5%;
+}
+
+.continue button {
+    width: 100%;
+    height: 200%;
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    background: hsl(224, 30%, 27%);
+    border-radius: 20px;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+
+.continue button:hover {
+    background-color: hsl(225, 38%, 33%);
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: x; */
+    height: 155px;
+    width: 155px;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    animation: float 3s ease-in-out infinite;
+}
+
+.circle .ownScore {
+    font-size: 300%;
+    font-weight: 800;
+    color: hsl(0, 0%, 100%);
+    animation: floatV2 2s ease-in-out infinite;
+}
+
+
+h2 {
+    color: hsl(221, 100%, 96%)
+}
+
+.paraLeftComp {
+    font-size: 15px;
+    width: 83%;
+    text-align: center;
+}
+
+.score {
+    position: absolute;
+    right: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    font-weight: 6600;
+    font-size: 90%;
+}
+
+.score span {
+    color: hsla(0, 0%, 4%, 0.562);
+    font-weight: 500;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatV2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: block;
+        overflow: hidden;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .leftComp {
+        height: 40vh;
+        width: 100.2%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        gap: 10px;
+    }
+
+
+    .circle .ownScore {
+        font-size: 40px;
+    }
+
+    .circle {
+        height: 120px;
+        width: 120px;
+    }
+
+    .rightComp {
+        height: 56vh;
+        width: 100%;
+    }
+
+    .continue {
+        padding-top: 6%;
+    }
+}
+</style>
